@@ -1,0 +1,25 @@
+{
+  "uuid": "1e2a37da-8edf-4b3a-bbf5-e85842827857",
+  "shortName": "Sharp Time",
+  "longName": "Sharp Time",
+  "companyName": "Wes Hicks",
+  "versionLabel": "1.6",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt","chalk"],
+  "capabilities": ["configurable","location"],
+  "enableMultiJS": false,
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "backgroundColor": 0,
+    "timeColor":1,
+    "dateColor":2,
+    "infoColor":3,
+    "KEY_TEMPERATURE":4,
+    "KEY_CONDITIONS":5
+  },
+  "resources": {
+    "media": []
+  }
+}
