@@ -3,10 +3,10 @@
   "shortName": "Sharp Time",
   "longName": "Sharp Time",
   "companyName": "Wes Hicks",
-  "versionLabel": "1.6",
+  "versionLabel": "2",
   "sdkVersion": "3",
   "targetPlatforms": ["basalt","chalk"],
-  "capabilities": ["configurable","location"],
+  "capabilities": ["configurable", "health"],
   "enableMultiJS": false,
   "watchapp": {
     "watchface": true
@@ -16,8 +16,7 @@
     "timeColor":1,
     "dateColor":2,
     "infoColor":3,
-    "KEY_TEMPERATURE":4,
-    "KEY_CONDITIONS":5
+    "stepColor": 4
   },
   "resources": {
     "media": []

@@ -19,13 +19,14 @@ function loadOptions() {
   var $timeColorPicker = $('#timeColorPicker');
   var $dateColorPicker = $('#dateColorPicker');
   var $infoColorPicker = $('#infoColorPicker');
+  var $stepsColorPicker = $('#stepsColorPicker');
 
   if (localStorage.backgroundColor) {
     $backgroundColorPicker[0].value = localStorage.backgroundColor;
     $timeColorPicker[0].value = localStorage.timeColor;
     $dateColorPicker[0].value = localStorage.dateColor;
     $infoColorPicker[0].value = localStorage.infoColor;
-    $enableWeather.prop('checked', localStorage.enableWeather);
+    $stepsColorPicker[0].value = localStorage.stepColor;
   }
 }
 
@@ -34,21 +35,21 @@ function getAndStoreConfigData() {
   var $timeColorPicker = $('#timeColorPicker');
   var $dateColorPicker = $('#dateColorPicker');
   var $infoColorPicker = $('#infoColorPicker');
-  var $enableWeather   = $('#enableWeather');
+  var $stepsColorPicker = $('#stepsColorPicker');
 
   var options = {
     backgroundColor: $backgroundColorPicker.val(),
     timeColor: $timeColorPicker.val(),
     dateColor: $dateColorPicker.val(),
     infoColor: $infoColorPicker.val(),
-    enableWeather: $enableWeather.is(':checked')
+    stepColor: $stepsColorPicker.val()
   };
 
   localStorage.backgroundColor = options.backgroundColor;
   localStorage.timeColor = options.timeColor;
   localStorage.dateColor = options.dateColor;
   localStorage.infoColor = options.infoColor;
-  localStorage.enableWeather = options.enableWeather;
+  localStorage.stepColor = options.stepColor;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

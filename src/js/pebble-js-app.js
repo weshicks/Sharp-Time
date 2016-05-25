@@ -95,7 +95,8 @@ Pebble.addEventListener('webviewclosed', function(e) {
       backgroundColor: parseInt(configData.backgroundColor, 16),
       timeColor: parseInt(configData.timeColor, 16),
       dateColor: parseInt(configData.dateColor, 16),
-      infoColor: parseInt(configData.infoColor, 16)
+      infoColor: parseInt(configData.infoColor, 16),
+      stepColor: parseInt(configData.stepColor, 16)
     }, function() {
       console.log('Send successful!');
     }, function() {
