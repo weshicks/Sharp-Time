@@ -3,7 +3,7 @@
   "shortName": "Sharp Time",
   "longName": "Sharp Time",
   "companyName": "Wes Hicks",
-  "versionLabel": "2",
+  "versionLabel": "2.1",
   "sdkVersion": "3",
   "targetPlatforms": ["basalt","chalk"],
   "capabilities": ["configurable", "health"],

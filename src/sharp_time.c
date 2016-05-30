@@ -58,7 +58,7 @@ static void set_info_color(int color){
 }
 
 static void set_steps_color(int color){
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Setting steps color");
+  // APP_LOG(APP_LOG_LEVEL_DEBUG, "Setting steps color");
   GColor steps_color = GColorFromHEX(color);
 
   persist_write_int(KEY_STEP_COLOR, color);
@@ -82,7 +82,7 @@ static void health_handler(HealthEventType event, void *context) {
 }
 
 static void inbox_received_handler(DictionaryIterator *iter, void *context) {
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Inbox received handler");
+  // APP_LOG(APP_LOG_LEVEL_DEBUG, "Inbox received handler");
 
   Tuple *background_color_t = dict_find(iter, KEY_BACKGROUND_COLOR);
   Tuple *time_color_t = dict_find(iter, KEY_TIME_COLOR);
@@ -90,7 +90,7 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
   Tuple *info_color_t = dict_find(iter, KEY_INFO_COLOR);
   Tuple *steps_color_t = dict_find(iter, KEY_STEP_COLOR);
 
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Steps");
+  // APP_LOG(APP_LOG_LEVEL_DEBUG, "Steps");
 
   // static char temperature_buffer[4];
 
@@ -118,7 +118,7 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
   }
 
   if(steps_color_t) {
-    APP_LOG(APP_LOG_LEVEL_DEBUG, "Steps color pass");
+    // APP_LOG(APP_LOG_LEVEL_DEBUG, "Steps color pass");
 
     int steps_color = steps_color_t->value->int32;
     // APP_LOG(APP_LOG_LEVEL_DEBUG, "Setting steps color: %d", steps_color);
@@ -207,13 +207,14 @@ static void main_window_load(Window *window) {
   //GRect(0, 130, PBL_IF_ROUND_ELSE(125, 110), 30)
   // Create temperature Layer
   s_steps_layer = text_layer_create(
-    GRect(0,130, PBL_IF_ROUND_ELSE(180, 195), 50));
+    GRect(0,130, PBL_IF_ROUND_ELSE(215, 195), 50));
 
   // Style the text
   text_layer_set_background_color(s_steps_layer, GColorClear);
   text_layer_set_text_color(s_steps_layer, GColorWhite);
   text_layer_set_text_alignment(s_steps_layer, GTextAlignmentCenter);
   text_layer_set_text(s_steps_layer, "...");
+  // text_layer_set_text(s_steps_layer, "10555s");
   text_layer_set_font(s_steps_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24));
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_steps_layer));
 
